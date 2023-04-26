@@ -1,11 +1,12 @@
 import { useRouter } from "expo-router";
 import { StyleSheet } from "react-native";
 
-import EditScreenInfo from "../../components/EditScreenInfo";
 import { Text, View } from "../../components/Themed";
 import loadSerializableQuery from "../../src/relay/loadSerializableQuery";
 
-import TwoQueryNode, { twoQuery } from "../../__generated__/twoQuery.graphql";
+import MoviesQueryNode, {
+  moviesQuery,
+} from "../../__generated__/moviesQuery.graphql";
 
 export default function TabOneScreen() {
   const router = useRouter();
@@ -14,9 +15,9 @@ export default function TabOneScreen() {
       <Text
         onPress={async () => {
           const result = await loadSerializableQuery<
-            typeof TwoQueryNode,
-            twoQuery
-          >(TwoQueryNode.params, {});
+            typeof MoviesQueryNode,
+            moviesQuery
+          >(MoviesQueryNode.params, {});
           router.push({
             pathname: "/movies",
             params: { queryRef: JSON.stringify(result) },

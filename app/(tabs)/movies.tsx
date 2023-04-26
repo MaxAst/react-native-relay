@@ -9,10 +9,10 @@ import environment from "../../src/relay/environment";
 import { SerializablePreloadedQuery } from "../../src/relay/loadSerializableQuery";
 import useSerializablePreloadedQuery from "../../src/relay/useSerializableQuery";
 
-import type { twoQuery } from "../../__generated__/TwoQuery.graphql";
+import type { moviesQuery } from "../../__generated__/moviesQuery.graphql";
 
-export const TwoQuery = graphql`
-  query twoQuery {
+export const MoviesQuery = graphql`
+  query moviesQuery {
     allFilms {
       edges {
         node {
@@ -25,12 +25,12 @@ export const TwoQuery = graphql`
 `;
 
 type Props = {
-  preloadedQuery: SerializablePreloadedQuery<ConcreteRequest, twoQuery>;
+  preloadedQuery: SerializablePreloadedQuery<ConcreteRequest, moviesQuery>;
 };
 
 function Movies({ preloadedQuery }: Props) {
   const queryRef = useSerializablePreloadedQuery(environment, preloadedQuery);
-  const data = usePreloadedQuery(TwoQuery, queryRef);
+  const data = usePreloadedQuery(MoviesQuery, queryRef);
   return (
     <FlatList
       style={styles.list}

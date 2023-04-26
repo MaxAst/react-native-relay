@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<c2ac7f07b11cc6db9f592db26559ae0a>>
+ * @generated SignedSource<<3e2486a9962c54c0e98e1d7afecada83>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -9,8 +9,8 @@
 // @ts-nocheck
 
 import { ConcreteRequest, Query } from 'relay-runtime';
-export type twoQuery$variables = {};
-export type twoQuery$data = {
+export type moviesQuery$variables = {};
+export type moviesQuery$data = {
   readonly allFilms: {
     readonly edges: ReadonlyArray<{
       readonly node: {
@@ -20,9 +20,9 @@ export type twoQuery$data = {
     } | null> | null;
   } | null;
 };
-export type twoQuery = {
-  response: twoQuery$data;
-  variables: twoQuery$variables;
+export type moviesQuery = {
+  response: moviesQuery$data;
+  variables: moviesQuery$variables;
 };
 
 const node: ConcreteRequest = (function(){
@@ -80,7 +80,7 @@ return {
     "argumentDefinitions": [],
     "kind": "Fragment",
     "metadata": null,
-    "name": "twoQuery",
+    "name": "moviesQuery",
     "selections": (v0/*: any*/),
     "type": "Root",
     "abstractKey": null
@@ -89,20 +89,20 @@ return {
   "operation": {
     "argumentDefinitions": [],
     "kind": "Operation",
-    "name": "twoQuery",
+    "name": "moviesQuery",
     "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "2f6eba9bfef2ba6bba2b809c98a51491",
+    "cacheID": "a90d41d13bb272108cd1d61822b3469d",
     "id": null,
     "metadata": {},
-    "name": "twoQuery",
+    "name": "moviesQuery",
     "operationKind": "query",
-    "text": "query twoQuery {\n  allFilms {\n    edges {\n      node {\n        id\n        title\n      }\n    }\n  }\n}\n"
+    "text": "query moviesQuery {\n  allFilms {\n    edges {\n      node {\n        id\n        title\n      }\n    }\n  }\n}\n"
   }
 };
 })();
 
-(node as any).hash = "1bb541cfe18724942c112a5bb2a1e1e8";
+(node as any).hash = "e7ad68dc5e3c8edd789e1e3f86990dcc";
 
 export default node;
