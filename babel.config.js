@@ -3,6 +3,7 @@ module.exports = function (api) {
   return {
     presets: ["babel-preset-expo"],
     plugins: [
+      require.resolve("babel-plugin-relay"),
       require.resolve("expo-router/babel"),
     ],
   };
